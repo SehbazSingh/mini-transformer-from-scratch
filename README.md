@@ -86,12 +86,6 @@ pip install torch
 
 ---
 
-## ▶️ Run
-
-python your_script.py
-
----
-
 ## 🎯 Features
 
 * Built completely from scratch
