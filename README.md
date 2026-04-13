@@ -34,8 +34,8 @@ The main goal is to understand how language models actually work internally.
 
 ## 🏗️ Project Structure
 
-├── data.txt
-├── main.py (or notebook)
+├── data.txt \n
+├── main.py (or notebook)\n 
 ├── README.md
 
 ---
