@@ -36,7 +36,7 @@ The main goal is to understand how language models actually work internally.
 
 ├── data.txt
 
-├── main.py (or notebook)
+├── Script.ipynb
 
 ├── README.md
 
