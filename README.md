@@ -1,139 +1,166 @@
-# 🚀 Mini Transformer from Scratch
+# 🧠 Mini Transformer from Scratch
 
-A lightweight Transformer-style language model built from scratch using PyTorch.
-This project demonstrates the core concepts behind modern NLP systems like embeddings, positional encoding, and self-attention.
+A simple implementation of a Transformer-based chatbot built **completely from scratch using PyTorch**, without relying on pre-trained models or APIs.
 
----
-
-## 📌 Overview
-
-This project builds a simple text generation model without using high-level NLP libraries.
-
-It covers:
-
-* Tokenization & vocabulary building
-* Word embeddings
-* Positional encoding
-* Self-attention mechanism
-* Sequence prediction
-
-The main goal is to understand how language models actually work internally.
+This project demonstrates the **core concepts behind modern Large Language Models (LLMs)** such as GPT.
 
 ---
 
-## 🧠 Key Concepts Covered
+## 🚀 Features
 
-* Self-Attention (Query, Key, Value)
+* 🔤 Custom tokenizer (word-level)
+* 📚 Vocabulary creation from dataset
+* 🧠 Self-Attention mechanism (Q, K, V)
+* 📍 Positional Encoding
+* ⚖️ Scaled Dot-Product Attention
+* 🔁 Next-token prediction
+* 💬 Text generation (chatbot)
+* 💾 Model saving & loading
+* 🧩 Modular design (`model_utils.py`)
+
+---
+
+## 🏗️ Architecture
+
+The model follows a simplified Transformer pipeline:
+
+```
+Input Text
+   ↓
+Tokenization
+   ↓
+Embedding Layer
+   ↓
+Positional Encoding
+   ↓
+Self-Attention (Q, K, V)
+   ↓
+Linear Layer (Prediction)
+   ↓
+Next Token Output
+```
+
+---
+
+## 🧠 Key Concepts Implemented
+
+* Self-Attention
+* Scaled Dot-Product Attention
 * Positional Encoding
-* Embedding layers
-* Softmax & probability sampling
-* Cross-entropy loss
-* Sequence modeling
+* Sequence Modeling
+* Probabilistic Sampling (temperature)
 
 ---
 
-## 🏗️ Project Structure
-```
-├── data.txt                  # Training data
-├── Model-training-loop.ipynb # Main model notebook with training implementation
-├── model.pth                 # Trained model weights
-├── model_utils.py            # Utility functions for model
-├── test.py                   # Testing and inference script
-├── README.md                 # This file
-```
----
+## 📂 Project Structure
 
-## 📂 Files Description
-
-- **Model-training-loop.ipynb**: Jupyter notebook containing the complete implementation of the transformer model, training loop, and evaluation
-- **model_utils.py**: Helper functions and utilities for the model (preprocessing, tokenization, etc.)
-- **test.py**: Script for testing the trained model and running inference
-- **model.pth**: Pre-trained model weights (PyTorch format)
-- **data.txt**: Training dataset used to train the model
+```
+mini-transformer-from-scratch/
+│
+├── model_utils.py   # Load model + generate responses
+├── train.py         # Training script
+├── main.py          # Chatbot interface
+├── data.txt         # Training dataset
+├── model.pth        # Saved model weights
+└── README.md
+```
 
 ---
 
-## ⚙️ How It Works
+## ⚙️ Installation
 
-1. **Data Processing**
-
-   * Reads text data
-   * Builds vocabulary
-   * Converts words to indices
-
-2. **Model**
-
-   * Embedding layer converts tokens into vectors
-   * Positional encoding adds order information
-   * Self-attention captures relationships between words
-
-3. **Training**
-
-   * Predicts next sequence
-   * Uses CrossEntropyLoss
-   * Optimized with Adam
-
-4. **Generation**
-
-   * Takes user input
-   * Predicts next words step-by-step
-   * Uses sampling for realistic output
-
----
-
-## 🧪 Example
 ```
-You: ai is
-Bot: artificial intelligence
-
-You: python is
-Bot: a programming language
-```
----
-
-## 🛠️ Installation
-```
+git clone https://github.com/your-username/mini-transformer-from-scratch.git
+cd mini-transformer-from-scratch
 pip install torch
 ```
----
-
-## 🎯 Features
-
-* Built completely from scratch
-* Custom attention implementation
-* Interactive text generation
-* Beginner-friendly code
 
 ---
 
-## 🚧 Limitations
+## ▶️ How to Run
 
-* Small dataset → limited vocabulary
-* Not a full Transformer
-* Single attention layer only
+### 1. Train the model
+
+```
+python train.py
+```
+
+### 2. Run chatbot
+
+```
+python main.py
+```
 
 ---
 
-## 🔮 Future Improvements
+## 💬 Example Outputs
+
+```
+You: what is ai
+Bot: ai is artificial intelligence
+
+You: who are you
+Bot: i am a chatbot
+
+You: what is python
+Bot: python is a programming language
+```
+
+---
+
+## 💾 Model Saving & Loading
+
+The trained model is saved using:
+
+```
+torch.save(...)
+```
+
+And reused with:
+
+```
+load_model("model.pth")
+```
+
+---
+
+## 🎯 Limitations
+
+* Small dataset → limited knowledge
+* Word-level tokenizer (no subword handling)
+* Single-head attention (not full transformer)
+* No pretraining on large corpora
+
+---
+
+## 🚀 Future Improvements
 
 * Multi-head attention
-* Larger dataset training
-* Full Transformer architecture
-* Transformer encoder-decoder implementation
-* GPU optimization
+* Larger dataset
+* Better tokenizer (BPE / WordPiece)
+* GUI / Web interface (Streamlit)
+* Model deployment
 
 ---
 
-## 📚 Learning Purpose
+## 📌 Learning Outcomes
 
-Great for:
+This project helps understand:
 
-* NLP beginners
-* Understanding attention
-* Building ML fundamentals
+* How Transformers work internally
+* How LLMs generate text
+* Importance of data quality
+* Model training vs inference
+* End-to-end ML pipeline
 
 ---
 
-## ⭐ Support
+## 👨‍💻 Author
 
-If you found this useful, give it a ⭐ on GitHub!
+**Sehbaz Singh**
+
+---
+
+## ⭐ Acknowledgment
+
+Inspired by modern NLP architectures like Transformer and GPT.
