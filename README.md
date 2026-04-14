@@ -82,19 +82,19 @@ The main goal is to understand how language models actually work internally.
 ---
 
 ## 🧪 Example
-
+```
 You: ai is
 Bot: artificial intelligence
 
 You: python is
 Bot: a programming language
-
+```
 ---
 
 ## 🛠️ Installation
-
+```
 pip install torch
-
+```
 ---
 
 ## 🎯 Features
