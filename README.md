@@ -34,18 +34,18 @@ The main goal is to understand how language models actually work internally.
 
 ## 🏗️ Project Structure
 
-├── data.txt          # Training data
-├── Model.ipynb       # Main model notebook with implementation
-├── model.pth         # Trained model weights
-├── model_utils.py    # Utility functions for model
-├── test.py           # Testing and inference script
-├── README.md         # This file
+├── data.txt                  # Training data
+├── Model-training-loop.ipynb # Main model notebook with training implementation
+├── model.pth                 # Trained model weights
+├── model_utils.py            # Utility functions for model
+├── test.py                   # Testing and inference script
+├── README.md                 # This file
 
 ---
 
 ## 📂 Files Description
 
-- **Model.ipynb**: Jupyter notebook containing the complete implementation of the transformer model, training loop, and evaluation
+- **Model-training-loop.ipynb**: Jupyter notebook containing the complete implementation of the transformer model, training loop, and evaluation
 - **model_utils.py**: Helper functions and utilities for the model (preprocessing, tokenization, etc.)
 - **test.py**: Script for testing the trained model and running inference
 - **model.pth**: Pre-trained model weights (PyTorch format)
