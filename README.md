@@ -20,147 +20,46 @@ This project demonstrates the **core concepts behind modern Large Language Model
 
 ---
 
-## 🏗️ Architecture
+├── data.txt         # Training dataset
+# Mini Transformer from Scratch
 
-The model follows a simplified Transformer pipeline:
+A compact Transformer-style text generation project built from scratch with PyTorch.
 
-```
-Input Text
-   ↓
-Tokenization
-   ↓
-Embedding Layer
-   ↓
-Positional Encoding
-   ↓
-Self-Attention (Q, K, V)
-   ↓
-Linear Layer (Prediction)
-   ↓
-Next Token Output
-```
-
----
-
-## 🧠 Key Concepts Implemented
-
-* Self-Attention
-* Scaled Dot-Product Attention
-* Positional Encoding
-* Sequence Modeling
-* Probabilistic Sampling (temperature)
-
----
-
-## 📂 Project Structure
+## Project Structure
 
 ```
 mini-transformer-from-scratch/
-│
-├── model_utils.py   # Load model + generate responses
-├── train.py         # Training script
-├── main.py          # Chatbot interface
-├── data.txt         # Training dataset
-├── model.pth        # Saved model weights
+├── data.txt
+├── train.ipynb
+├── model.pth
+├── model_utils.py
+├── main.py
 └── README.md
 ```
 
----
+## Files
 
-## ⚙️ Installation
+- `train.ipynb`: notebook with the training and model-building workflow
+- `main.py`: script for running inference or chatbot interaction
+- `model_utils.py`: helper functions used by the model code
+- `model.pth`: saved model weights
+- `data.txt`: training data
+
+## How To Run
+
+1. Install dependencies:
 
 ```
-git clone https://github.com/your-username/mini-transformer-from-scratch.git
-cd mini-transformer-from-scratch
 pip install torch
 ```
 
----
+2. Open `train.ipynb` to train or inspect the model.
 
-## ▶️ How to Run
+3. Run `main.py` to use the saved model for inference.
 
-### 1. Train the model
+## Notes
 
-```
-python train.py
-```
-
-### 2. Run chatbot
-
-```
-python main.py
-```
-
----
-
-## 💬 Example Outputs
-
-```
-You: what is ai
-Bot: ai is artificial intelligence
-
-You: who are you
-Bot: i am a chatbot
-
-You: what is python
-Bot: python is a programming language
-```
-
----
-
-## 💾 Model Saving & Loading
-
-The trained model is saved using:
-
-```
-torch.save(...)
-```
-
-And reused with:
-
-```
-load_model("model.pth")
-```
-
----
-
-## 🎯 Limitations
-
-* Small dataset → limited knowledge
-* Word-level tokenizer (no subword handling)
-* Single-head attention (not full transformer)
-* No pretraining on large corpora
-
----
-
-## 🚀 Future Improvements
-
-* Multi-head attention
-* Larger dataset
-* Better tokenizer (BPE / WordPiece)
-* GUI / Web interface (Streamlit)
-* Model deployment
-
----
-
-## 📌 Learning Outcomes
-
-This project helps understand:
-
-* How Transformers work internally
-* How LLMs generate text
-* Importance of data quality
-* Model training vs inference
-* End-to-end ML pipeline
-
----
-
-## 👨‍💻 Author
-
-**Sehbaz Singh**
-
----
-
-## ⭐ Acknowledgment
-
-Inspired by modern NLP architectures like Transformer and GPT.
+- The repository filenames now match the current workspace.
+- The notebook file is `train.ipynb`, not `Model-training-loop.ipynb`.
+- The runtime script is `main.py`, not `test.py`.
+=======
