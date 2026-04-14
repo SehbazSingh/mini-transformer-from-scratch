@@ -33,19 +33,14 @@ The main goal is to understand how language models actually work internally.
 ---
 
 ## 🏗️ Project Structure
-
+```
 ├── data.txt                  # Training data
-
 ├── Model-training-loop.ipynb # Main model notebook with training implementation
-
 ├── model.pth                 # Trained model weights
-
 ├── model_utils.py            # Utility functions for model
-
 ├── test.py                   # Testing and inference script
-
 ├── README.md                 # This file
-
+```
 ---
 
 ## 📂 Files Description
